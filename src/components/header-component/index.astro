@@ -11,11 +11,16 @@ if (user.isLoggedIn) icons.push(user.icon);
 ---
 
 <header class="h-screen">
-  <div class="relative box-content bg-red-500 p-8 flex justify-start items-center space-x-12">
+  <div
+    class="relative box-content bg-red-500 p-8 flex justify-start items-center space-x-12"
+  >
     {
       icons.map((icon: string) => (
         <a href="#">
-          <Icon name={icon} class:list={`${icon === "mdi:account" && "absolute top-0 right-0"}`} />
+          <Icon
+            name={icon}
+            class:list={`${icon === user.icon && "absolute top-0 right-0"}`}
+          />
         </a>
       ))
     }
