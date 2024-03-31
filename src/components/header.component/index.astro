@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+import ProfileIcon from "../profile-icon.component/index.astro";
+
+const user = {
+  isLoggedIn: true,
+  hasPicture: true,
+  data: {
+    link: "/profile",
+    name: "mdi:account",
+  },
+};
+
+const menu = {
+  buttons: [
+    { link: "/home", name: "home" },
+    { link: "/messages", name: "messages" },
+  ],
+};
+---
+
+<header class="bg-green-700 p-8">
+  <div
+    class="relative box-content bg-red-500 flex justify-start buttons-center space-x-12"
+  >
+    {
+      menu.buttons.map((button: { link: string; name: string }) => (
+        <a href={button.link}>
+          <Icon name={button.name} />
+        </a>
+      ))
+    }
+    {user.isLoggedIn && <ProfileIcon />}
+  </div>
+</header>
