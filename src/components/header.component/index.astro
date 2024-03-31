@@ -15,9 +15,9 @@ const { logo, user, menu } = data;
     </div>
 
     {
-      menu.buttons.map((button: { link: string; name: string }) => (
+      menu.buttons.map((button: { link: string; icon: string }) => (
         <a href={button.link}>
-          <Icon name={button.name} />
+          <Icon name={button.icon} />
         </a>
       ))
     }
