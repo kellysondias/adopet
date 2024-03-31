@@ -1,0 +1,20 @@
+{
+    "logo": {
+      "url": "../../../public/logo.svg",
+      "alt": "Logo"
+    },
+    "menu": {
+      "buttons": [
+        { "link": "/home", "name": "home" },
+        { "link": "/messages", "name": "messages" }
+      ]
+    },
+    "user": {
+      "isLoggedIn": true,
+      "hasPicture": true,
+      "data": {
+        "link": "/profile",
+        "name": "mdi:account"
+      }
+    }
+  }
