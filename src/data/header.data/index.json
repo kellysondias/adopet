@@ -5,13 +5,13 @@
   },
   "menu": {
     "buttons": [
-      { "link": "/home", "icon": "home" },
-      { "link": "/messages", "icon": "messages" }
+      { "link": "/pagina-inicial", "icon": "home" },
+      { "link": "/mensagens", "icon": "messages" }
     ]
   },
   "user": {
     "isLoggedIn": true,
-    "link": "/profile",
+    "link": "/perfil",
     "icon": "user",
     "profilePicture": {
       "url": null,
