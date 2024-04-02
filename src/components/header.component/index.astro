@@ -8,20 +8,32 @@ const { logo, user, menu } = data;
 
 <header class="bg-green-700 p-8">
   <div
-    class="relative box-content bg-red-500 flex justify-start items-center buttons-center space-x-12"
+    class="relative box-content bg-red-500 flex justify-start items-center space-x-8"
   >
-    <div>
+    <div class="hidden md:block">
       <img src={logo.url} alt={logo.alt} />
     </div>
 
-    {
-      menu.buttons.map((button: { link: string; icon: string }) => (
-        <a href={button.link}>
-          <Icon name={button.icon} />
-        </a>
-      ))
-    }
+    <nav>
+      <ul class="flex items-center space-x-12">
+        {
+          menu.buttons.map((button: { link: string; icon: string }) => (
+            <li>
+              <a href={button.link}>
+                <Icon name={button.icon} />
+              </a>
+            </li>
+          ))
+        }
 
-    {user.isLoggedIn && <ProfileIcon />}
+        {
+          user.isLoggedIn && (
+            <li class="absolute right-0">
+              <ProfileIcon />
+            </li>
+          )
+        }
+      </ul>
+    </nav>
   </div>
 </header>
