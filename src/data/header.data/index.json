@@ -1,0 +1,17 @@
+{
+  "menu": {
+    "buttons": [
+      { "link": "/pagina-inicial", "icon": "home" },
+      { "link": "/mensagens", "icon": "messages" }
+    ]
+  },
+  "user": {
+    "isLoggedIn": true,
+    "link": "/perfil",
+    "icon": "user",
+    "profilePicture": {
+      "url": "https://avatars.githubusercontent.com/u/77993169?v=4",
+      "alt": "Sua foto de perfil. Clique aqui para ser redirecionado ao seu perfil no AdoPet"
+    }
+  }
+}

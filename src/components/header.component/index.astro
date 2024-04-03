@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+import ProfileIcon from "../profile-icon.component/index.astro";
+import data from "../../data/header.data/index.json";
+import logo from "../../../public/logo.svg";
+
+const { user, menu } = data;
+---
+
+<header class="bg-transparent p-8 desktop:px-20">
+  <div
+    class="relative box-content flex justify-start items-center space-x-8"
+  >
+    <div class="hidden tablet:block">
+      <img
+        src={logo.src}
+        alt="Logo da AdoPet"
+        width={logo.width}
+        height={logo.height}
+      />
+    </div>
+
+    <nav>
+      <ul class="flex items-center space-x-12">
+        {
+          menu.buttons.map((button: { link: string; icon: string }) => (
+            <li id={button.icon}>
+              <a href={button.link}>
+                <Icon name={button.icon} size={20} />
+              </a>
+            </li>
+          ))
+        }
+
+        {
+          user.isLoggedIn && (
+            <li class="absolute right-0 pr-3">
+              <ProfileIcon />
+            </li>
+          )
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
