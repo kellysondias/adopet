@@ -8,9 +8,7 @@ const { user, menu } = data;
 ---
 
 <header class="bg-transparent p-8 desktop:px-20">
-  <div
-    class="relative box-content flex justify-start items-center space-x-8"
-  >
+  <div class="relative box-content flex justify-start items-center space-x-8">
     <div class="hidden tablet:block">
       <img
         src={logo.src}
@@ -23,13 +21,16 @@ const { user, menu } = data;
     <nav>
       <ul class="flex items-center space-x-12">
         {
-          menu.buttons.map((button: { link: string; icon: string }) => (
-            <li id={button.icon}>
-              <a href={button.link}>
-                <Icon name={button.icon} size={20} />
-              </a>
-            </li>
-          ))
+          menu.buttons.map(
+            (button: { link: string; icon: string; alt: string }) => (
+              <li id={button.icon}>
+                <a href={button.link}>
+                  <Icon name={button.icon} size={20} />
+                  <span class="sr-only">{button.alt}</span>
+                </a>
+              </li>
+            )
+          )
         }
 
         {

@@ -22,10 +22,11 @@ const size = 30;
       ) : (
         <div>
           <Icon
-            name={icon}
+            name={icon.name}
             size={size}
             class:list="tablet:size-[2.5rem] desktop:size-[3.5rem]"
           />
+          <span class="sr-only">{icon.alt}</span>
         </div>
       )
     }</a
