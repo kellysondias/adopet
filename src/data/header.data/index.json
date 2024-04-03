@@ -2,7 +2,7 @@
   "menu": {
     "buttons": [
       {
-        "link": "/pagina-inicial",
+        "link": "/home",
         "icon": "home",
         "alt": "Um ícone branco minimalista do menu. Clique para navegar até a página principal."
       },
