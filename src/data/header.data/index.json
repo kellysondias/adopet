@@ -1,8 +1,4 @@
 {
-  "logo": {
-    "url": "../../../public/logo.svg",
-    "alt": "Logo"
-  },
   "menu": {
     "buttons": [
       { "link": "/pagina-inicial", "icon": "home" },
@@ -14,8 +10,8 @@
     "link": "/perfil",
     "icon": "user",
     "profilePicture": {
-      "url": null,
-      "alt": null
+      "url": "https://avatars.githubusercontent.com/u/77993169?v=4",
+      "alt": "Sua foto de perfil. Clique aqui para ser redirecionado ao seu perfil no AdoPet"
     }
   }
 }
