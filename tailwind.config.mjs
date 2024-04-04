@@ -7,6 +7,14 @@ export default {
       tablet: "768px",
       desktop: "1440px",
     },
+    extend: {
+      colors: {
+        'primary-color': '#36D6AD',
+      },
+      fontFamily: {
+        "poppins": ["Poppins", "sans-serif"]
+      }
+    }
   },
   plugins: [],
 };
