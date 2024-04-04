@@ -1,8 +1,8 @@
 ---
 interface Props {
   color?: RGB | ColorName;
-  width?: string;
-  height?: string;
+  width?: number | `${number}`;
+  height?: number | `${number}`;
 }
 
 const { color = "#fff", width = "128", height = "31" } = Astro.props as Props;
