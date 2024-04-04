@@ -1,6 +1,7 @@
 ---
-import Head from "../main-head/index.astro"
-import Header from "../../components/header.component/index.astro"
+import Head from "../head/index.astro";
+import Header from "../../components/header.component/index.astro";
+import Footer from "../../components/footer.component/index.astro";
 
 interface Props {
   title?: string;
@@ -16,5 +17,6 @@ const { title } = Astro.props;
   <body>
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
