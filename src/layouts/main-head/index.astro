@@ -11,5 +11,5 @@ const { title, description } = Astro.props;
   <meta name="author" content="Kellyson Dias" />
   <meta name="description" content={description ?? placeholder.description} />
   <link rel="icon" type="image/svg+xml" href="../../../public/favicon.svg" />
-  <title>{`Adopet - ${title}` ?? placeholder.title}</title>
+  <title>{title ? `Adopet | ${title}` : placeholder.title}</title>
 </head>
