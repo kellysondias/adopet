@@ -1,4 +1,4 @@
-type RGB = `#${number}`;
+type RGB = `#${string}`;
 type HEX =
   | `rgb(${number}, ${number}, ${number})`
   | `rgb(${number},${number},${number})`;
