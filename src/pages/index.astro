@@ -1,16 +1,25 @@
 ---
 import MainLayout from "../layouts/main-layout/index.astro";
 import Logo from "../components/logo.component/index.astro";
+import { heading, text } from "./data.json";
 
-
-
-
+// /* Boas-vindas! */
+// font-size: 28px;
 ---
 
-<MainLayout>
-  <main class="bg-[#3772FF]">
+<MainLayout background="bg-initial-page-color">
+  <main class="text-white">
     <div class="flex justify-center">
-      <Logo color="#FCF0E3" colorAlt="Branco Antigo" width={186.67} height={46} />
+      <Logo
+        color="#FCF0E3"
+        colorAlt="Branco Antigo"
+        width={186.67}
+        height={46}
+      />
+    </div>
+    <div class="font-medium text-center flex justify-center flex-col my-6">
+      <h2 class="font-ibm-plex-sans text-2xl mb-4">{heading}</h2>
+      <p class="w-60 self-center tablet:w-3/6 desktop:w-80">{text}</p>
     </div>
   </main>
 </MainLayout>
