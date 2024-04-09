@@ -9,12 +9,14 @@ export default {
     },
     extend: {
       colors: {
-        'primary-color': '#36D6AD',
+        "primary-color": "#36D6AD",
+        "initial-page-color": "#3772FF",
       },
       fontFamily: {
-        "poppins": ["Poppins", "sans-serif"]
-      }
-    }
+        poppins: ["Poppins", "sans-serif"],
+        "ibm-plex-sans": ["IBM Plex Sans", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
