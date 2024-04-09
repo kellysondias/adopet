@@ -2,19 +2,13 @@
 import { Icon } from "astro-icon/components";
 import ProfileIcon from "../profile-icon.component/index.astro";
 import { user, menu } from "../../data/header.data/index.json";
-import logo from "../../../public/logo.svg";
-
+import Logo from "../logo.component/index.astro";
 ---
 
 <header class="bg-transparent p-8 desktop:px-20">
   <div class="relative box-content flex justify-start items-center space-x-8">
     <div class="hidden tablet:block">
-      <img
-        src={logo.src}
-        alt="Logo da AdoPet"
-        width={logo.width}
-        height={logo.height}
-      />
+      <Logo />
     </div>
 
     <nav>
