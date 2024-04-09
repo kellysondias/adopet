@@ -1,13 +1,14 @@
 ---
 interface Props {
   color?: Color;
+  colorAlt?: string;
   width?: number | `${number}`;
   height?: number | `${number}`;
 }
 
-const { color = "#fff", width = "128", height = "31" } = Astro.props as Props;
+const { color = "#fff", width = "128", height = "31", colorAlt } = Astro.props as Props;
 
-const alt = "Logo da AdoPet";
+const alt = `Logo da AdoPet ${colorAlt ? `Na cor "${colorAlt}""` : ""}`.trim();
 ---
 
 <div>
