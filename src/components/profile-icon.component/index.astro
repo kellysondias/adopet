@@ -11,7 +11,7 @@ const size = 30;
 <div>
   <a href={link} class="flex items-baseline space-x-1">
     {
-      !profilePicture?.url ? (
+      profilePicture?.url ? (
         <Image
           src={profilePicture.url}
           alt={profilePicture.alt}
