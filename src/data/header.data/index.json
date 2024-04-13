@@ -14,7 +14,7 @@
     ]
   },
   "user": {
-    "isLoggedIn": true,
+    "isLoggedIn": false,
     "link": "/perfil",
     "icon": {
       "name": "user",
