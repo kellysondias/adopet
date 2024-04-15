@@ -3,11 +3,11 @@
   "text": "How about changing your life by adopting your new best buddy? Come on board!",
   "buttons": [
     {
-      "link": "/sign-up",
+      "link": "/sign-in",
       "text": "I have an account"
     },
     {
-      "link": "/sign-in",
+      "link": "/sign-up",
       "text": "I want to sign-up"
     }
   ]
