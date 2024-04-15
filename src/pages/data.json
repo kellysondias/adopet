@@ -1,0 +1,14 @@
+{
+  "heading": "Welcome!",
+  "text": "How about changing your life by adopting your new best buddy? Come on board!",
+  "buttons": [
+    {
+      "link": "/sign-up",
+      "text": "I have an account"
+    },
+    {
+      "link": "/sign-in",
+      "text": "I want to sign-up"
+    }
+  ]
+}
