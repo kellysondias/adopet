@@ -2,6 +2,8 @@
 import Head from "../head/index.astro";
 import Header from "../../components/header.component/index.astro";
 import Footer from "../../components/footer.component/index.astro";
+import LeftVector from "../../components/vectors/left-vector.astro";
+import RightVector from "../../components/vectors/right-vector.astro";
 
 interface Props {
   title?: string;
@@ -10,14 +12,18 @@ interface Props {
 }
 
 const { title, background } = Astro.props;
+
+const isHome = title === "Home" || title === "home";
 ---
 
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en-US">
   <Head {title} />
-  <body class=`${background} font-poppins` >
+  <body class=`${background} font-poppins`>
+    <LeftVector />
     <Header />
     <slot />
+    <RightVector {isHome} />
     <Footer />
   </body>
 </html>
