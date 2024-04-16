@@ -1,0 +1,15 @@
+---
+import MainLayout from "../../layouts/main-layout/index.astro";
+import Logo from "../../components/logo.component/index.astro";
+import { heading, text } from "./data.json";
+---
+
+<MainLayout background="bg-white">
+  <h1 class="flex-center">
+    <Logo color="#3772FF" colorAlt="Azul" width={186.67} height={46} />
+  </h1>
+  <section class="flex-center flex-col text-[#3772FF] text-center text-lg">
+    <h2 class="mt-5 mb-2"><bold class="font-bold">{heading}</bold></h2>
+    <p>{text}</p>
+  </section>
+</MainLayout>
