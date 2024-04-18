@@ -14,9 +14,7 @@ const { title, description } = Astro.props;
   <link rel="stylesheet" href="index.css" />
   <title>
     {
-      title
-        ? `Adopet | ${title.charAt(0).toUpperCase() + title.slice(1)}`
-        : placeholder.title
+      `Adopet ${title ? `| ${title.charAt(0).toUpperCase() + title.slice(1)}` : ""}`
     }
   </title>
 </head>
