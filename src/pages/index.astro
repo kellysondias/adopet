@@ -3,6 +3,7 @@ import MainLayout from "../layouts/main-layout/index.astro";
 import Logo from "../components/logo.component/index.astro";
 import { heading, text, buttons } from "./data.json";
 import Illustration from "../components/illustration.component/index.astro";
+import BottomRightVector from "../components/vectors/bottom-right-vector.astro"
 ---
 
 <MainLayout background="bg-initial-page-color">
@@ -32,4 +33,5 @@ import Illustration from "../components/illustration.component/index.astro";
     </section>
     <Illustration />
   </main>
+  <BottomRightVector isMainPage />
 </MainLayout>
