@@ -1,14 +1,14 @@
 ---
 interface Props {
-  hidden?: "small" | "mobile" | "tablet" | "desktop";
+  show?: "small" | "mobile" | "tablet" | "desktop";
   color?: Color;
   isMainPage?: boolean;
 }
-const { hidden, color = "#36D6AD", isMainPage } = Astro.props;
+const { show, color = "#36D6AD", isMainPage } = Astro.props;
 ---
 
 <div
-  class={`absolute block right-0 -z-20 inset-y-56 tablet:inset-y-40 desktop:inset-y-16 ${hidden ? hidden : ""}`}
+  class={`absolute right-0 -z-20 inset-y-56 tablet:inset-y-40 desktop:inset-y-16 ${show ? show : ""} ${!isMainPage ? "hidden" : ""}`}
   style={{ display: `${isMainPage ? "block" : ""}` }}
 >
   <svg
@@ -31,25 +31,25 @@ const { hidden, color = "#36D6AD", isMainPage } = Astro.props;
 <style>
   @media (min-width: 300px) {
     .small {
-      @apply hidden;
+      @apply block;
     }
   }
 
   @media (min-width: 360px) {
     .mobile {
-      @apply hidden;
+      @apply block;
     }
   }
 
   @media (min-width: 768px) {
     .tablet {
-      @apply hidden;
+      @apply block;
     }
   }
 
   @media (min-width: 1440px) {
     .desktop {
-      @apply hidden;
+      @apply block;
     }
   }
 </style>
