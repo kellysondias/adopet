@@ -1,0 +1,26 @@
+---
+import Head from "../head/index.astro";
+import Header from "../../components/header.component/index.astro";
+import Footer from "../../components/footer.component/index.astro";
+import TopLeftVector from "../../components/vectors/top-left-vector.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  background: `bg-${string}`;
+}
+
+const { title, background } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="en-US">
+  <Head {title} />
+  <body class=`${background} font-poppins`>
+    <TopLeftVector />
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

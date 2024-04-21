@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon/components";
+import { user } from "../../data/header.data/index.json";
+import { Image } from "astro:assets";
+
+const { link, icon, profilePicture } = user;
+
+const size = 30;
+---
+
+<div>
+  <a href={link} class="flex items-baseline space-x-1">
+    {
+      profilePicture?.url ? (
+        <Image
+          src={profilePicture.url}
+          alt={profilePicture.alt}
+          width={size}
+          height={size}
+          class:list="size-[1.875rem] tablet:size-[2.5rem] desktop:size-[3.5rem] rounded-full"
+        />
+      ) : (
+        <div>
+          <Icon
+            name={icon.name}
+            size={size}
+            class:list="tablet:size-[2.5rem] desktop:size-[3.5rem]"
+          />
+          <span class="sr-only">{icon.alt}</span>
+        </div>
+      )
+    }</a
+  >
+</div>

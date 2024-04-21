@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "buttons": [
+      {
+        "link": "/home",
+        "icon": "home",
+        "alt": "Um ícone branco minimalista do menu. Clique para navegar até a página principal."
+      },
+      {
+        "link": "/mensagens",
+        "icon": "messages",
+        "alt": "Ícone branco representando uma carta com uma linha irregular indicando um selo ou abertura na parte superior. Clique para navegar até a página de mensagens"
+      }
+    ]
+  },
+  "user": {
+    "isLoggedIn": false,
+    "link": "/perfil",
+    "icon": {
+      "name": "user",
+      "alt": "Você não possui nenhuma foto de perfil no momento. Clique aqui para ser redirecionado ao seu perfil no AdoPet e adicione a sua foto de perfil."
+    },
+    "profilePicture": {
+      "url": "https://avatars.githubusercontent.com/u/77993169?v=4",
+      "alt": "Sua foto de perfil. Clique aqui para ser redirecionado ao seu perfil no AdoPet."
+    }
+  }
+}
