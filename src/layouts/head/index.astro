@@ -12,6 +12,10 @@ const { title, description } = Astro.props;
   <meta name="description" content={description ?? placeholder.description} />
   <link rel="icon" type="image/svg+xml" href="../../../public/favicon.svg" />
   <link rel="stylesheet" href="index.css" />
+  <script
+  src="https://kit.fontawesome.com/f39d54f0ca.js"
+  crossorigin="anonymous"
+  is:inline />
   <title>
     {
       `Adopet ${title ? `| ${title.charAt(0).toUpperCase() + title.slice(1)}` : ""}`
