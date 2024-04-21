@@ -1,0 +1,16 @@
+---
+import FormInput from "../../../components/form-input.component/index.astro";
+import Button from "../../../components/button.component/index.astro";
+import { button, inputList } from "./data.json";
+---
+
+<form action="POST" class="bg-blue-500/15">
+  <Fragment>
+    {
+      inputList.map(({ name, placeholder, type }) => (
+        <FormInput {name} {placeholder} {type} />
+      ))
+    }
+  </Fragment>
+  <Button classList="mt-6">{button.text}</Button>
+</form>

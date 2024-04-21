@@ -6,7 +6,12 @@ interface Props {
   height?: number | `${number}`;
 }
 
-const { color = "#fff", width = "128", height = "31", colorAlt } = Astro.props as Props;
+const {
+  color = "#fff",
+  width = "128",
+  height = "31",
+  colorAlt,
+} = Astro.props as Props;
 
 const alt = `Logo da AdoPet ${colorAlt ? `Na cor "${colorAlt}"` : ""}`.trim();
 ---
