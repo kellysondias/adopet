@@ -6,22 +6,26 @@
     {
       "name": "Email",
       "placeholder": "Choose your best email",
-      "type": "email"
+      "type": "email",
+      "id": "email"
     },
     {
       "name": "Name",
       "placeholder": "Type your full name",
-      "type": "name"
+      "type": "name",
+      "id": "name"
     },
     {
       "name": "Password",
       "placeholder": "Create a password",
-      "type": "password"
+      "type": "password",
+      "id": "password"
     },
     {
       "name": "Confirm your password",
-      "placeholder": "Repeat your created password",
-      "type": "password"
+      "placeholder": "Repeat password",
+      "type": "password",
+      "id": "confirm-password"
     }
   ]
 }

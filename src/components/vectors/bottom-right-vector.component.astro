@@ -8,7 +8,7 @@ const { show, color = "#36D6AD", isMainPage } = Astro.props;
 ---
 
 <div
-  class={`absolute right-0 -z-20 inset-y-56 tablet:inset-y-40 desktop:inset-y-16 ${show ? show : ""} ${!isMainPage ? "hidden" : ""}`}
+  class={`absolute right-0 -z-20 inset-y-56 tablet:inset-y-32 desktop:inset-y-16 ${show ? show : ""} ${!isMainPage ? "hidden" : ""}`}
   style={{ display: `${isMainPage ? "block" : ""}` }}
 >
   <svg

@@ -4,11 +4,11 @@ import Button from "../../../components/button.component/index.astro";
 import { button, inputList } from "./data.json";
 ---
 
-<form action="POST" class="bg-blue-500/15">
+<form action="POST" class="mt-6 tablet:mt-10 desktop:mt-12">
   <Fragment>
     {
-      inputList.map(({ name, placeholder, type }) => (
-        <FormInput {name} {placeholder} {type} />
+      inputList.map(({ name, placeholder, type, id }, index) => (
+        <FormInput {name} {placeholder} {type} {id} {index} />
       ))
     }
   </Fragment>
