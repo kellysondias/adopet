@@ -1,11 +1,24 @@
 ---
-const { classList } = Astro.props
+interface Props {
+  classList?: string;
+  link?: `${string}`;
+}
+const { classList, link } = Astro.props;
+
+const style =
+  "max-[330px]:w-max max-[330px]:px-2 text-base text-white first:mb-4 bg-button rounded-md font-semibold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.25)] py-2 w-[50%] text-center hover:bg-button-hover tablet:py-3 tablet:w-[25%] tablet:text-lg";
 ---
 
 <div class=`flex justify-center items-center ${classList ? classList : ""}`>
-  <button
-    class="max-[330px]:w-max max-[330px]:px-2 text-base text-white first:mb-4 bg-button rounded-md font-semibold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.25)] py-2 w-[50%] hover:bg-button-hover tablet:py-3 tablet:w-[25%] tablet:text-lg"
-  >
-    <slot />
-  </button>
+  {
+    link === undefined ? (
+      <button class={`${style}`}>
+        <slot />
+      </button>
+    ) : (
+      <a href={link} class={`${style}`}>
+        <slot />
+      </a>
+    )
+  }
 </div>
