@@ -1,4 +1,5 @@
 ---
+import { Input } from "./input.component/index";
 interface Props {
   id: string;
   name: string;
@@ -8,14 +9,7 @@ interface Props {
   placeholder: string;
 }
 
-const {
-  id,
-  name,
-  type,
-  index,
-  style = "sign-up",
-  placeholder,
-} = Astro.props;
+const { id, name, type, index, style = "sign-up", placeholder } = Astro.props;
 
 const is = {
   firstInput: index === 0,
@@ -43,7 +37,7 @@ const is = {
     />
     {
       is.passwordInput && (
-        <i class="fa-regular fa-eye-slash absolute right-0 self-center mr-3 cursor-pointer text-[#BCBCBC] hover:text-black " />
+        <i class="fa-regular fa-eye-slash absolute right-0 self-center mr-3 cursor-pointer text-[#BCBCBC] hover:text-black" />
       )
     }
   </div>
