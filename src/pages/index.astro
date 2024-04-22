@@ -2,9 +2,9 @@
 import MainLayout from "../layouts/main-layout/index.astro";
 import Logo from "../components/logo.component/index.astro";
 import { heading, text, buttons } from "./data.json";
-import Button from "../components/button.component/index.astro"
+import Button from "../components/button.component/index.astro";
 import Illustration from "../components/illustration.component/index.astro";
-import BottomRightVector from "../components/vectors/bottom-right-vector.component.astro"
+import BottomRightVector from "../components/vectors/bottom-right-vector.component.astro";
 ---
 
 <MainLayout background="bg-initial-page-color">
@@ -26,9 +26,7 @@ import BottomRightVector from "../components/vectors/bottom-right-vector.compone
     <section class="m-8">
       {
         buttons.map(({ link, text }: { link: string; text: string }) => (
-          <Button>
-            <a href={link}>{text}</a>
-          </Button>
+          <Button {link}>{text}</Button>
         ))
       }
     </section>
