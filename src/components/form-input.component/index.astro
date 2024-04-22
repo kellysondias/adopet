@@ -24,7 +24,7 @@ const is = {
 };
 ---
 
-<div class="flex-center flex-col">
+<div class="flex justify-center items-center flex-col">
   <h3
     class=`${is.firstInput ? "mt-0" : "mt-5"} mb-1 text-[#737380] text-base tablet:text-lg desktop:font-semibold`
   >
@@ -32,7 +32,7 @@ const is = {
   </h3>
 
   <div
-    class=`relative flex-center text-[#737380] w-5/6 tablet:w-3/6 ${!is.profileForm && is.passwordInput ? "desktop:w-2/6" : ""}`
+    class=`relative flex justify-center items-center text-[#737380] w-5/6 tablet:w-3/6 ${!is.profileForm && is.passwordInput ? "desktop:w-2/6" : ""}`
   >
     <input
       id={id}
