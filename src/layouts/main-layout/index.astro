@@ -7,11 +7,11 @@ import TopLeftVector from "../../components/vectors/top-left-vector.astro";
 interface Props {
   title?: string;
   description?: string;
+  hasHeader: boolean;
   background: `bg-${string}`;
 }
 
-const { title, background } = Astro.props;
-
+const { title, background, hasHeader = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,7 +19,7 @@ const { title, background } = Astro.props;
   <Head {title} />
   <body class=`${background} font-poppins`>
     <TopLeftVector />
-    <Header />
+    {hasHeader && <Header />}
     <slot />
     <Footer />
   </body>
