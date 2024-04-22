@@ -1,5 +1,6 @@
 ---
-import { Input } from "./input.component/index";
+import { Input } from "./input.component";
+
 interface Props {
   id: string;
   name: string;
@@ -28,39 +29,6 @@ const is = {
   <div
     class=`relative flex justify-center items-center text-[#737380] w-5/6 tablet:w-3/6 ${!is.profileForm && is.passwordInput ? "desktop:w-2/6" : ""}`
   >
-    <input
-      id={id}
-      name={type}
-      type={type as astroHTML.JSX.HTMLInputTypeAttribute}
-      placeholder={placeholder}
-      class=`py-2 text-center rounded-md bg-[#F7F7F7] drop-shadow-[0px_2px_2px_rgba(0,0,0,0.25)] w-full`
-    />
-    {
-      is.passwordInput && (
-        <i class="fa-regular fa-eye-slash absolute right-0 self-center mr-3 cursor-pointer text-[#BCBCBC] hover:text-black" />
-      )
-    }
+    <Input {id} {placeholder} initialType={type} client:load />
   </div>
 </div>
-
-<script>
-  const passwordInputs = document.querySelectorAll('input[type="password"]');
-  const showPasswordButtons = document.querySelectorAll("i");
-
-  function togglePasswordVisibility(
-    input: HTMLInputElement,
-    button: HTMLElement
-  ) {
-    input.type = input.type === "password" ? "text" : "password";
-    button.classList.toggle("fa-eye-slash", input.type === "password");
-    button.classList.toggle("fa-eye", input.type === "text");
-  }
-
-  showPasswordButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      passwordInputs.forEach((input) =>
-        togglePasswordVisibility(input as HTMLInputElement, button)
-      );
-    });
-  });
-</script>
