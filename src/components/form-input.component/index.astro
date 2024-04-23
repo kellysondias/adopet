@@ -1,5 +1,5 @@
 ---
-import { Input } from "./input.component";
+import { PasswordInput } from "./input.component";
 
 interface Props {
   id: string;
@@ -29,6 +29,13 @@ const is = {
   <div
     class=`relative flex justify-center items-center text-[#737380] w-5/6 tablet:w-3/6 ${!is.profileForm && is.passwordInput ? "desktop:w-2/6" : ""}`
   >
-    <Input {id} {placeholder} initialType={type} client:load />
+    <input
+      id={id}
+      name={type}
+      type={type as astroHTML.JSX.HTMLInputTypeAttribute}
+      placeholder={placeholder}
+      class={`py-2 text-center rounded-md bg-[#F7F7F7] drop-shadow-[0px_2px_2px_rgba(0,0,0,0.25)] w-full ${is.passwordInput ? "hidden" : ""}`}
+    />
+    {is.passwordInput && <PasswordInput {id} {placeholder} client:load />}
   </div>
 </div>
