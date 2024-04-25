@@ -1,0 +1,18 @@
+---
+import MainLayout from "../../layouts/main-layout/index.astro";
+import { header, text, link } from "./data.json";
+import Illustration from "./illustration/index.astro";
+---
+
+<MainLayout background="bg-initial-page-color" hasHeader={false}>
+  <div
+    class="mt-20 flex flex-col justify-center items-center text-center text-white"
+  >
+    <h1 class="text-9xl mb-5">{header}</h1>
+    <p class="w-3/6 tablet:text-lg">{text}</p>
+    <a href="/" class="text-center mt-5 hover:text-[#36D6AD]"
+      >{link} <i class="fa-solid fa-arrow-right ml-2"></i></a
+    >
+    <Illustration />
+  </div>
+</MainLayout>

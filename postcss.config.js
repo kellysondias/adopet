@@ -1,4 +1,4 @@
 export const plugins = [
-    import("tailwindcss"),
+	import("tailwindcss"),
 ];
   

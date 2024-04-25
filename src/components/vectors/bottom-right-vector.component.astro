@@ -2,14 +2,14 @@
 interface Props {
   show?: "small" | "mobile" | "tablet" | "desktop";
   color?: Color;
-  isMainPage?: boolean;
+  isStatic?: boolean;
 }
-const { show, color = "#36D6AD", isMainPage } = Astro.props;
+const { show, color = "#36D6AD", isStatic } = Astro.props;
 ---
 
 <div
-  class={`absolute right-0 -z-20 inset-y-56 tablet:inset-y-32 desktop:inset-y-16 ${show ? show : ""} ${!isMainPage ? "hidden" : ""}`}
-  style={{ display: `${isMainPage ? "block" : ""}` }}
+  class={`absolute right-0 -z-20 inset-y-56 tablet:inset-y-32 desktop:inset-y-16 ${show ? show : ""} ${!isStatic ? "hidden" : ""}`}
+  style={{ display: `${isStatic ? "block" : ""}` }}
 >
   <svg
     width="135"
