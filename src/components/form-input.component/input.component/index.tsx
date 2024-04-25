@@ -10,7 +10,7 @@ export const PasswordInput: React.FC<Props> = ({ id, placeholder }) => {
   const [isActive, setActive] = useState(false);
   const [value, setValue] = useState("");
 
-  const isPassword = type === "password";
+	const isPassword = type === "password";
 
   const togglePasswordVisibility = () => {
     setType(isPassword ? "text" : "password");
